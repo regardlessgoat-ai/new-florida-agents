@@ -162,10 +162,17 @@ details[open] summary::after{transform:rotate(45deg)}
 details p{margin:0 0 20px;color:var(--soft);max-width:62ch}
 @media(max-width:860px){.faq .grid{grid-template-columns:1fr;gap:10px}.faq{padding:56px 0}}
 
-footer{background:var(--sand);padding:44px 0 56px;font-size:14px;color:var(--soft)}
-footer p{margin:0 0 10px;max-width:90ch}
-footer .mark{color:var(--ink);display:inline-block;margin-bottom:14px}
+footer{background:var(--sand);padding:56px 0 28px;color:var(--soft);font-size:15px}
+footer p{margin:0 0 8px}
 footer a{color:var(--ink)}
+footer .mark{color:var(--ink);display:inline-block;margin-bottom:10px;font-size:24px}
+.fcols{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr) minmax(0,4fr);gap:40px;padding-bottom:30px;border-bottom:1px solid #cfc5ab}
+.fcols h3{font:600 12px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--coral);margin:8px 0 14px}
+.fcols a{display:inline-block;padding:4px 0;font-weight:600}
+footer .resp{color:var(--ink);margin:26px 0 14px;font-size:15.5px}
+footer .small{font-size:12.5px;line-height:1.55;max-width:none}
+footer .pow{font-size:11px;margin:22px 0 0;letter-spacing:.04em}
+@media(max-width:760px){.fcols{grid-template-columns:1fr;gap:22px}footer{padding:44px 0 24px}.fcols a{padding:10px 0}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.fall .track i,td.bar i{width:var(--w)}}
 </style>
 </head>
@@ -281,10 +288,12 @@ footer a{color:var(--ink)}
 <section class="faq" id="questions"><div class="wrap grid">
 <div><p class="eyebrow">Questions</p><h2>Straight answers</h2></div>
 <div>
-<details><summary>How fresh is the list?</summary><p>Every agent in the file got a licence in the last 14 days and has no broker on record. A new file is made each week.</p></details>
-<details><summary>How soon do I get my first file?</summary><p>Within three working days of your order, by email. After that, one file each week.</p></details>
-<details><summary>What can I do with the file?</summary><p>It is a CSV file. Open it in Excel, or load it into any label or mail-merge tool, and send your letters, cards or welcome packs the same day.</p></details>
-<details><summary>Can I change my county?</summary><p>Yes. Write to newfloridaagents@gmail.com and your next file is for the new county.</p></details>
+<details><summary>What is in each row?</summary><p>One new agent per row: name, mailing address, city, county, zip code, licence number and licence date. It is ready for labels and mail merge.</p></details>
+<details><summary>Which counties are covered?</summary><p>All 67 Florida counties. This week's file has 571 new agents in 46 counties. Dade, Broward and Palm Beach have the most.</p></details>
+<details><summary>How fresh is the list?</summary><p>Every agent in the file got a Florida sales associate licence in the last 14 days and has no broker on record. A new file is made each week, so you always work with this week's new licences.</p></details>
+<details><summary>When and how does it arrive?</summary><p>By email, as one CSV file. Your first file comes within three working days of your order. After that you get one file each week.</p></details>
+<details><summary>Should I take one county or all of Florida?</summary><p>One county gives you every new agent in the county you choose. It suits a firm that recruits around one office. All of Florida gives you every county in one file. It suits a firm with several offices, or one that recruits across the state.</p></details>
+<details><summary>How fast can I start recruiting?</summary><p>The day your file arrives. Open it in Excel or your mail-merge tool, print the labels, and post your letters. Most agents choose a firm in their first weeks, so an early letter counts.</p></details>
 <details><summary>Are there rules for writing to these agents?</summary><p>Yes. A licensee who advertises must follow the state advertising rule, 61J2-10.025: show your firm's licensed name and say nothing false. Any letters or emails you send are your own responsibility.</p></details>
 <details><summary>How do I cancel?</summary><p>Write to newfloridaagents@gmail.com. The plan stops and no further month is charged.</p></details>
 </div>
@@ -292,12 +301,15 @@ footer a{color:var(--ink)}
 </main>
 
 <footer><div class="wrap">
-<a class="mark" href="#top">newfloridaagents<i>.com</i></a>
-<p>Questions: <a href="mailto:newfloridaagents@gmail.com">newfloridaagents@gmail.com</a></p>
-<p>Counts updated November 20, 2026.</p>
-<p>Any letters or emails a buyer sends are the buyer's own responsibility.</p>
-<p>Photos, cropped, from Wikimedia Commons: <a href="https://commons.wikimedia.org/wiki/File:Miami_aerial_pano.jpg">Miami by Spcc111</a> (CC BY-SA 4.0) · <a href="https://commons.wikimedia.org/wiki/File:Fort_Lauderdale_Aerial_Shot.jpg">Fort Lauderdale by Yanjipy</a> (CC BY-SA 4.0) · <a href="https://commons.wikimedia.org/wiki/File:West_Palm_Beach_Aerial_November_2014_photo_Don_Ramey_Logan.jpg">West Palm Beach by Don Ramey Logan</a> (CC BY 4.0) · <a href="https://commons.wikimedia.org/wiki/File:Lake_Eola_and_Orlando_Skyline_seen_in_2024.jpg">Orlando by JER3L1337</a> (CC BY 4.0) · <a href="https://commons.wikimedia.org/wiki/File:Fort_Meyers_and_Cape_Coral_Aerial_(30658938330).jpg">Fort Myers and Cape Coral by formulanone</a> (CC BY-SA 2.0) · <a href="https://commons.wikimedia.org/wiki/File:Downtown_Tampa,_Florida.jpg">Tampa by Clément Bardot</a> (CC BY-SA 4.0). Licence texts: <a href="https://creativecommons.org/licenses/">creativecommons.org/licenses</a>. Video: Mixkit, free licence. The photos show places, not people on the list.</p>
-<p style="font-size:11px;margin-top:18px">powered by Tech.Regardless</p>
+<div class="fcols">
+<div><a class="mark" href="#top">newfloridaagents<i>.com</i></a><p>New Florida agents with no broker yet, by county, each week.</p></div>
+<div><h3>Contact</h3><p><a href="mailto:newfloridaagents@gmail.com">newfloridaagents@gmail.com</a></p></div>
+<div><h3>Plans</h3><p><a href="https://buy.stripe.com/9B628t5Xi8n37jtcBb9bO03">One county, $39 a month</a></p><p><a href="https://buy.stripe.com/cNi14p71meLr6fp0St9bO04">All of Florida, $149 a month</a></p></div>
+</div>
+<p class="resp">Any letters or emails a buyer sends are the buyer's own responsibility.</p>
+<p class="small">Counts updated November 20, 2026.</p>
+<p class="small">Photos, cropped, from Wikimedia Commons: <a href="https://commons.wikimedia.org/wiki/File:Miami_aerial_pano.jpg">Miami by Spcc111</a> (CC BY-SA 4.0) · <a href="https://commons.wikimedia.org/wiki/File:Fort_Lauderdale_Aerial_Shot.jpg">Fort Lauderdale by Yanjipy</a> (CC BY-SA 4.0) · <a href="https://commons.wikimedia.org/wiki/File:West_Palm_Beach_Aerial_November_2014_photo_Don_Ramey_Logan.jpg">West Palm Beach by Don Ramey Logan</a> (CC BY 4.0) · <a href="https://commons.wikimedia.org/wiki/File:Lake_Eola_and_Orlando_Skyline_seen_in_2024.jpg">Orlando by JER3L1337</a> (CC BY 4.0) · <a href="https://commons.wikimedia.org/wiki/File:Fort_Meyers_and_Cape_Coral_Aerial_(30658938330).jpg">Fort Myers and Cape Coral by formulanone</a> (CC BY-SA 2.0) · <a href="https://commons.wikimedia.org/wiki/File:Downtown_Tampa,_Florida.jpg">Tampa by Clément Bardot</a> (CC BY-SA 4.0). <a href="https://creativecommons.org/licenses/">Licences</a>. Video: Mixkit.</p>
+<p class="pow">powered by Tech.Regardless</p>
 </div></footer>
 
 <script>
