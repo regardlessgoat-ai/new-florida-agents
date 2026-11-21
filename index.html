@@ -3,90 +3,329 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>New Florida Agents | This week's new licensees with no broker, by county</title>
+<meta name="description" content="A weekly list of new Florida real estate agents with no broker yet, sorted by county, for brokers who recruit by post. 571 agents in the file of November 20, 2026.">
 <link rel="canonical" href="https://newfloridaagents.com/">
-<meta name="description" content="A weekly list of new Florida real estate agents with no broker yet, by county, for brokers who recruit by post.">
-<title>New Florida agents, each week</title>
+<meta property="og:title" content="New Florida Agents: 571 new licensees with no broker this week">
+<meta property="og:description" content="A weekly list for brokers who recruit by post. Sorted by county.">
+<meta property="og:image" content="https://newfloridaagents.com/assets/hero.jpg">
+<meta property="og:url" content="https://newfloridaagents.com/">
+<meta name="theme-color" content="#11201d">
+<link rel="preload" href="assets/playfair.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-:root{--ink:#1c2321;--soft:#5a6660;--paper:#f6f3ec;--card:#fffdf8;--line:#d9d3c4;--stamp:#9a3b2f;--green:#2f5d50}
+@font-face{font-family:Playfair;src:url(assets/playfair.woff2) format("woff2");font-weight:400 900;font-display:swap}
+:root{--ink:#11201d;--soft:#55635e;--paper:#f8f5ee;--card:#fffdf8;--line:#ddd6c6;--coral:#c8482c;--teal:#0e5a55;--sand:#e9dfc8;
+--serif:Playfair,Georgia,"Times New Roman",serif;--sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
 *{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.55 Georgia,'Times New Roman',serif}
-main{max-width:760px;margin:0 auto;padding:0 16px 64px}
-.draft{background:var(--stamp);color:#fff;font:600 14px/1.4 system-ui,sans-serif;padding:8px 16px;text-align:center}
-header{padding:40px 0 20px;border-bottom:3px double var(--ink)}
-.kicker{font:600 13px/1 system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--green)}
-h1{font-size:clamp(30px,6vw,46px);line-height:1.1;margin:.3em 0 .35em}
-.lede{font-size:20px;color:var(--soft);margin:0}
-h2{font-size:24px;margin:44px 0 10px}
-p{margin:.6em 0}
-.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:18px 0}
-.facts div{background:var(--card);border:1px solid var(--line);padding:14px}
-.facts b{display:block;font-size:34px;line-height:1.1;color:var(--green)}
-.facts span{font:14px/1.35 system-ui,sans-serif;color:var(--soft)}
-.scroll{overflow-x:auto}
-table{border-collapse:collapse;width:100%;background:var(--card);border:1px solid var(--line);font:15px/1.4 system-ui,sans-serif}
-th,td{padding:7px 10px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
-thead th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--soft)}
-td.n{text-align:right;font-variant-numeric:tabular-nums;width:70px}
-td.bar{width:55%}
-td.bar i{display:block;height:10px;background:var(--green)}
-td.mask{color:var(--soft);font-style:italic}
-.price{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
-.price div{background:var(--card);border:1px solid var(--ink);padding:18px}
-.price b{font-size:30px}
-.hold{display:inline-block;margin-top:10px;padding:8px 12px;border:1px dashed var(--stamp);color:var(--stamp);font:600 13px/1.3 system-ui,sans-serif}
-.buy{display:inline-block;margin-top:12px;padding:10px 16px;background:var(--green);color:#fff;text-decoration:none;font:600 15px/1.2 system-ui,sans-serif}
-.buy:focus,.buy:hover{background:var(--ink)}
-ul{padding-left:20px}
-footer{margin-top:48px;padding-top:14px;border-top:1px solid var(--line);font:14px/1.5 system-ui,sans-serif;color:var(--soft)}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+img,video{display:block;max-width:100%}
+a{color:var(--teal)}
+:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.08;letter-spacing:-.01em;margin:0}
+h2{font-size:clamp(30px,4.6vw,50px)}
+.eyebrow{font:600 12.5px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--coral);margin:0 0 14px}
+.btn{display:inline-block;min-height:48px;padding:14px 24px;background:var(--coral);color:#fff;text-decoration:none;font:600 16px/1.25 var(--sans);border:1px solid var(--coral);transition:background .2s,color .2s}
+.btn:hover{background:#a53a22;border-color:#a53a22}
+.btn.ghost{background:transparent;border-color:rgba(255,255,255,.7);color:#fff}
+.btn.ghost:hover{background:#fff;color:var(--ink)}
+.skip{position:absolute;left:-999px}.skip:focus{left:12px;top:12px;z-index:99;background:#fff;padding:10px}
+
+/* top bar */
+.top{position:fixed;inset:0 0 auto 0;z-index:20;color:#fff;transition:background .25s,box-shadow .25s,color .25s}
+.top .wrap{display:flex;align-items:center;gap:22px;height:64px}
+.mark{font:600 20px/1 var(--serif);color:inherit;text-decoration:none;margin-right:auto;white-space:nowrap}
+.mark i{font-style:normal;color:var(--coral)}
+.top nav{display:flex;gap:22px}
+.top nav a{color:inherit;text-decoration:none;font:500 15px/1 var(--sans);padding:14px 0}
+.top nav a:hover{text-decoration:underline;text-underline-offset:6px}
+.top .btn{min-height:40px;padding:10px 16px;font-size:15px}
+.top.solid{background:var(--paper);color:var(--ink);box-shadow:0 1px 0 var(--line)}
+@media(max-width:760px){.top nav{display:none}}
+
+/* hero */
+.hero{position:relative;min-height:min(100svh,860px);display:grid;align-items:end;color:#fff;background:var(--ink) url(assets/hero.jpg) center/cover;overflow:hidden}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:rgba(10,24,22,.56)}
+.hero .wrap{position:relative;z-index:2;width:100%;padding-top:120px;padding-bottom:64px;display:grid;grid-template-columns:1fr auto;gap:32px;align-items:end}
+.hero h1{font-size:clamp(40px,7.4vw,92px);max-width:13ch}
+.hero h1 em{font-style:italic;color:#ffd9a8}
+.hero p{font-size:clamp(18px,2vw,21px);max-width:44ch;margin:22px 0 30px;color:#f1ede4}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.stamp{width:clamp(150px,19vw,230px);height:auto;transform:rotate(-9deg);opacity:.95;animation:thud .7s .5s both cubic-bezier(.2,1.4,.4,1)}
+@keyframes thud{from{transform:rotate(-2deg) scale(1.7);opacity:0}}
+.vidbtn{position:absolute;z-index:3;right:20px;bottom:18px;background:rgba(0,0,0,.45);color:#fff;border:1px solid rgba(255,255,255,.5);font:500 13px/1 var(--sans);padding:10px 12px;min-height:44px;cursor:pointer}
+@media(max-width:760px){.hero .wrap{grid-template-columns:1fr;padding-bottom:84px}.hero .wrap{padding-top:200px}.stamp{position:absolute;right:16px;top:76px;width:104px}}
+
+/* the window: one big figure, then the fall */
+.window{padding:96px 0 72px}
+.window .grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:56px;align-items:center}
+.huge{font:600 clamp(110px,19vw,230px)/.82 var(--serif);color:var(--teal);letter-spacing:-.04em}
+.huge small{font-size:.38em;letter-spacing:0}
+.window p:not(.eyebrow){max-width:52ch;color:var(--soft)}
+.fall{list-style:none;margin:30px 0 0;padding:0;display:grid;gap:14px}
+.fall li{display:grid;grid-template-columns:92px 1fr 56px;gap:14px;align-items:center;font:500 15px/1.2 var(--sans)}
+.fall span.t{color:var(--soft)}
+.fall .track{height:14px;background:var(--sand)}
+.fall .track i{display:block;height:100%;width:0;background:var(--teal);transition:width 1.1s cubic-bezier(.2,.7,.2,1)}
+.in .fall .track i{width:var(--w)}
+.fall b{font:600 20px/1 var(--serif);text-align:right}
+.src{font-size:13.5px;color:var(--soft);margin-top:18px}
+@media(max-width:860px){.window .grid{grid-template-columns:1fr;gap:20px}.window{padding:64px 0 48px}}
+
+/* postcard rack */
+.rack{background:var(--ink);color:#fff;padding:84px 0 64px;overflow:hidden}
+.rack .head{display:flex;flex-wrap:wrap;align-items:end;gap:20px;margin-bottom:32px}
+.rack h2{margin-right:auto;max-width:17ch}
+.rack .eyebrow{color:#ffb59f}
+.ctrl{display:flex;gap:8px}
+.ctrl button{width:48px;height:48px;border:1px solid rgba(255,255,255,.45);background:transparent;color:#fff;font:400 20px/1 var(--sans);cursor:pointer}
+.ctrl button:hover{background:#fff;color:var(--ink)}
+.ctrl button.txt{width:auto;padding:0 14px;font-size:14px}
+.cards{list-style:none;margin:0;padding:6px 20px 26px;display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:#566 transparent;scroll-padding-left:20px}
+@media(min-width:1160px){.cards{padding-left:calc((100vw - 1120px)/2 + 20px);scroll-padding-left:calc((100vw - 1120px)/2 + 20px)}}
+.card{flex:0 0 min(78vw,420px);scroll-snap-align:start;background:#fffdf8;color:var(--ink);padding:12px 12px 0;box-shadow:0 14px 30px rgba(0,0,0,.35);transition:transform .35s}
+.card:nth-child(odd){transform:rotate(-1.1deg)}.card:nth-child(even){transform:rotate(.9deg)}
+.card:hover{transform:rotate(0) translateY(-6px)}
+.card figure{margin:0}
+.card img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
+.card figcaption{display:grid;grid-template-columns:1fr auto;gap:2px 12px;padding:14px 4px 16px;align-items:baseline}
+.place{grid-column:1/-1;font:600 11.5px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--soft)}
+.cty{font:600 27px/1.1 var(--serif)}
+.cnt{grid-column:1/-1;font-size:15px;color:var(--soft)}
+.cnt b{font:600 22px/1 var(--serif);color:var(--coral)}
+.card.last{display:grid;place-items:center;background:var(--coral);color:#fff;padding:28px;text-align:center}
+.card.last b{display:block;font:600 84px/1 var(--serif);margin:8px 0}
+.card.last .cnt{display:block;color:#fff;margin-bottom:20px}
+.card.last .btn{background:#fff;color:var(--ink);border-color:#fff}
+
+/* table */
+.table{padding:84px 0}
+.table .grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:48px}
+.table p:not(.eyebrow){color:var(--soft)}
+table{border-collapse:collapse;width:100%;font:15.5px/1.3 var(--sans)}
+th,td{padding:10px 8px;border-bottom:1px solid var(--line);text-align:left}
+tbody th{font-weight:600;white-space:nowrap}
+td.n{text-align:right;font:600 18px/1 var(--serif);width:64px}
+td.bar{width:58%}
+td.bar i{display:block;height:10px;width:0;background:var(--coral);transition:width 1s cubic-bezier(.2,.7,.2,1)}
+.in td.bar i{width:var(--w)}
+@media(max-width:860px){.table .grid{grid-template-columns:1fr;gap:18px}.table{padding:56px 0}td.bar{width:38%}}
+
+/* the file, drawn as the back of a postcard */
+.file{background:var(--sand);padding:84px 0}
+.file .grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:56px;align-items:center}
+.file ul{padding-left:20px;margin:18px 0 0}
+.file li{margin:8px 0}
+.back{background:var(--card);padding:26px;box-shadow:0 18px 36px rgba(60,40,10,.18);display:grid;grid-template-columns:1fr 1fr;gap:22px;transform:rotate(1.2deg);position:relative}
+.back::before{content:"";position:absolute;left:50%;top:26px;bottom:26px;border-left:1px solid var(--line)}
+.back h3{font:600 12px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--soft);margin-bottom:14px}
+.back .note{font:italic 500 19px/1.35 var(--serif);color:var(--teal)}
+.back dl{margin:0;display:grid;gap:11px}
+.back dt{font:600 11px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--soft)}
+.back dd{margin:4px 0 0;height:12px;background:repeating-linear-gradient(90deg,#c9c1ae 0 9px,transparent 9px 12px);width:var(--w,80%)}
+.back .post{position:absolute;right:20px;top:18px;width:52px;height:62px;border:2px dashed var(--coral);display:grid;place-items:center;font:600 11px/1.1 var(--sans);color:var(--coral);text-align:center;background:var(--card)}
+@media(max-width:860px){.file .grid{grid-template-columns:1fr;gap:28px}.file{padding:56px 0}}
+@media(max-width:480px){.back{grid-template-columns:1fr}.back::before{display:none}}
+
+/* week */
+.week{padding:84px 0}
+.steps{list-style:none;counter-reset:s;margin:36px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--ink)}
+.steps li{counter-increment:s;padding:22px 20px 0 0;position:relative}
+.steps li::before{content:counter(s);position:absolute;top:-17px;left:0;width:32px;height:32px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font:600 15px/1 var(--sans)}
+.steps h3{font-size:22px;margin:10px 0 6px}
+.steps p{margin:0;color:var(--soft);font-size:15.5px}
+@media(max-width:860px){.steps{grid-template-columns:1fr;border-top:0;border-left:2px solid var(--ink);margin-left:16px}.steps li{padding:0 0 26px 30px}.steps li::before{left:-17px;top:0}.steps h3{margin-top:0}.week{padding:56px 0}}
+
+/* price */
+.price{background:var(--ink);color:#fff;padding:84px 0}
+.price .eyebrow{color:#ffb59f}
+.plans{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:34px}
+.plan{background:var(--card);color:var(--ink);padding:32px}
+.plan h3{font-size:26px}
+.plan .amt{font:600 68px/1 var(--serif);margin:14px 0 6px}
+.plan .amt small{font:500 17px/1 var(--sans);color:var(--soft)}
+.plan p{color:var(--soft);margin:0 0 22px}
+.plan.wide{outline:3px solid var(--coral)}
+.fine{color:#cfd6d2;font-size:15px;max-width:70ch;margin-top:24px}
+@media(max-width:760px){.plans{grid-template-columns:1fr}.price{padding:56px 0}}
+
+/* questions */
+.faq{padding:84px 0}
+.faq .grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:48px}
+details{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;list-style:none;padding:20px 40px 20px 0;font:600 21px/1.25 var(--serif);position:relative;min-height:48px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:6px;top:16px;font:400 28px/1 var(--sans);color:var(--coral);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin:0 0 20px;color:var(--soft);max-width:62ch}
+@media(max-width:860px){.faq .grid{grid-template-columns:1fr;gap:10px}.faq{padding:56px 0}}
+
+footer{background:var(--sand);padding:44px 0 56px;font-size:14px;color:var(--soft)}
+footer p{margin:0 0 10px;max-width:90ch}
+footer .mark{color:var(--ink);display:inline-block;margin-bottom:14px}
+footer a{color:var(--ink)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.fall .track i,td.bar i{width:var(--w)}}
 </style>
 </head>
 <body>
-<main>
-<header>
-<div class="kicker">For Florida real estate brokers</div>
-<h1>New Florida agents, each week</h1>
-<p class="lede">People who got a Florida sales associate licence in the last 14 days and have no broker yet. Sorted by county. For post.</p>
-</header>
+<a class="skip" href="#main">Skip to the content</a>
+<header class="top" id="bar"><div class="wrap">
+<a class="mark" href="#top">New Florida Agents<i>.</i></a>
+<nav aria-label="Sections"><a href="#counties">This week</a><a href="#file">The file</a><a href="#price">Price</a><a href="#questions">Questions</a></nav>
+<a class="btn" href="#price">Order</a>
+</div></header>
 
-<h2>Why the first weeks matter</h2>
-<div class="facts">
-<div><b>88%</b><span>of agents licensed in the last 7 days have no broker</span></div>
-<div><b>61%</b><span>still have none at 30 days</span></div>
-<div><b>40%</b><span>still have none at 90 days</span></div>
+<main id="main">
+<section class="hero" id="top">
+<video id="vid" muted loop playsinline preload="none" poster="assets/hero.jpg" aria-hidden="true" tabindex="-1"></video>
+<div class="wrap">
+<div>
+<p class="eyebrow" style="color:#ffd9a8">For Florida brokers who recruit</p>
+<h1><span data-count="571">571</span> new Florida agents. <em>No broker yet.</em></h1>
+<p>Every week the state licenses a new class of sales associates. Most have not picked a firm. We sort them by county, so your letter can reach them first.</p>
+<div class="cta"><a class="btn" href="#price">Get this week's file</a><a class="btn ghost" href="#counties">See the counts by county</a></div>
 </div>
-<p>Most new agents pick a firm in the first weeks. A letter in week one gets there before most firms write. The state adds about 440 new agents a week.</p>
-<p><small>Counted from the state licence file of 17 Nov 2026.</small></p>
+<svg class="stamp" viewBox="0 0 220 220" role="img" aria-label="Postmark: file of November 20, 2026">
+<defs><path id="ring" d="M110 110m-82 0a82 82 0 1 1 164 0a82 82 0 1 1-164 0"/></defs>
+<g fill="none" stroke="#ffd9a8" stroke-width="3"><circle cx="110" cy="110" r="104"/><circle cx="110" cy="110" r="62"/></g>
+<text fill="#ffd9a8" font-family="system-ui,sans-serif" font-size="15.5" font-weight="700" ><textPath href="#ring" textLength="500" lengthAdjust="spacing">NEW FLORIDA AGENTS · WEEKLY FILE · BY COUNTY ·</textPath></text>
+<text x="110" y="100" text-anchor="middle" fill="#ffd9a8" font-family="Georgia,serif" font-size="30" font-weight="700">NOV 20</text>
+<text x="110" y="126" text-anchor="middle" fill="#ffd9a8" font-family="system-ui,sans-serif" font-size="15" font-weight="700" letter-spacing="3">2026</text>
+<text x="110" y="146" text-anchor="middle" fill="#ffd9a8" font-family="system-ui,sans-serif" font-size="11" font-weight="700" letter-spacing="2">FLORIDA</text>
+</svg>
+</div>
+<button class="vidbtn" id="vidbtn" type="button" hidden>Pause video</button>
+</section>
 
-<h2>This week's file: 571 agents</h2>
-<p>File of 2026-11-20. Licensed in the last 14 days, no broker on record.</p>
-<div class="scroll"><table>
-<thead><tr><th>County</th><th style="text-align:right">Agents</th><th></th></tr></thead>
-<tbody><tr><th scope="row">Dade</th><td class="n">86</td><td class="bar"><i style="width:100%"></i></td></tr><tr><th scope="row">Broward</th><td class="n">64</td><td class="bar"><i style="width:74%"></i></td></tr><tr><th scope="row">Palm Beach</th><td class="n">55</td><td class="bar"><i style="width:64%"></i></td></tr><tr><th scope="row">Orange</th><td class="n">43</td><td class="bar"><i style="width:50%"></i></td></tr><tr><th scope="row">Lee</th><td class="n">36</td><td class="bar"><i style="width:42%"></i></td></tr><tr><th scope="row">Hillsborough</th><td class="n">26</td><td class="bar"><i style="width:30%"></i></td></tr><tr><th scope="row">Duval</th><td class="n">16</td><td class="bar"><i style="width:19%"></i></td></tr><tr><th scope="row">Polk</th><td class="n">14</td><td class="bar"><i style="width:16%"></i></td></tr><tr><th scope="row">Manatee</th><td class="n">13</td><td class="bar"><i style="width:15%"></i></td></tr><tr><th scope="row">Sarasota</th><td class="n">13</td><td class="bar"><i style="width:15%"></i></td></tr><tr><th scope="row">Brevard</th><td class="n">11</td><td class="bar"><i style="width:13%"></i></td></tr><tr><th scope="row">Lake</th><td class="n">11</td><td class="bar"><i style="width:13%"></i></td></tr><tr><th scope="row">All other counties</th><td class="n">183</td><td class="bar"></td></tr></tbody>
-</table></div>
-
-<h2>What is in the file</h2>
-<ul>
-<li>Name, mailing address, city, county, zip code, licence number, licence date.</li>
-<li>No phone and no email. The state does not give them. This is a list for letters and cards.</li>
-<li>One CSV file. It opens in Excel and in any mail-merge tool.</li>
+<section class="window" id="why"><div class="wrap grid reveal">
+<div class="huge" aria-hidden="true">88<small>%</small></div>
+<div>
+<p class="eyebrow">Why the first weeks matter</p>
+<h2>In week one, almost nine in ten new agents have no broker.</h2>
+<p>Then the number falls fast. A new agent picks a firm early, and stays there. The firm that writes first is the firm they remember.</p>
+<ul class="fall" aria-label="Share of new agents with no broker, by days since the licence">
+<li><span class="t">First 7 days</span><span class="track"><i style="--w:88%"></i></span><b>88%</b></li>
+<li><span class="t">First 30 days</span><span class="track"><i style="--w:61%"></i></span><b>61%</b></li>
+<li><span class="t">First 90 days</span><span class="track"><i style="--w:40%"></i></span><b>40%</b></li>
 </ul>
-
-
-<h2>Price</h2>
-<div class="price">
-<div><b>$39</b> a month<br>One county, a new file each week.<br><a class="buy" href="https://buy.stripe.com/9B628t5Xi8n37jtcBb9bO03">Order one county</a></div>
-<div><b>$149</b> a month<br>All of Florida, a new file each week.<br><a class="buy" href="https://buy.stripe.com/cNi14p71meLr6fp0St9bO04">Order all Florida</a></div>
+<p class="src">Counted from the state licence file of November 17, 2026. The state adds about 440 new agents a week.</p>
 </div>
-<p>Payment is by card through Stripe. The card statement shows the seller name Tech.Regardless. Your first file comes by email within three working days of the order, then one each week. To cancel, write to the address below.</p>
+</div></section>
 
-<h2>Where it comes from</h2>
-<p>The public licence file of the Florida Department of Business and Professional Regulation. It is a public record (Fla. Stat. 455.229), and any firm can download it. We do the weekly sort: new, no broker, by county.</p>
-<p>This is not legal advice. A licensee who writes to these agents must follow the state advertising rule (61J2-10.025): show the firm's licensed name and say nothing false.</p>
+<section class="rack" id="counties" aria-labelledby="rackh">
+<div class="wrap head">
+<div><p class="eyebrow">File of November 20, 2026</p><h2 id="rackh">Where this week's new agents are.</h2></div>
+<div class="ctrl"><button type="button" class="txt" id="pp" hidden>Pause</button><button type="button" id="prev" aria-label="Earlier counties">&larr;</button><button type="button" id="next" aria-label="More counties">&rarr;</button></div>
+</div>
+<ul class="cards" id="cards" tabindex="0" aria-label="Counties, with this week's counts"><li class="card"><figure><img src="assets/dade.webp" width="960" height="640" loading="lazy" alt="Miami, Dade County, seen from above or across the water"><figcaption><span class="place">Miami</span><span class="cty">Dade County</span><span class="cnt"><b>86</b> new agents, no broker</span></figcaption></figure></li><li class="card"><figure><img src="assets/broward.webp" width="960" height="640" loading="lazy" alt="Fort Lauderdale, Broward County, seen from above or across the water"><figcaption><span class="place">Fort Lauderdale</span><span class="cty">Broward County</span><span class="cnt"><b>64</b> new agents, no broker</span></figcaption></figure></li><li class="card"><figure><img src="assets/palmbeach.webp" width="960" height="640" loading="lazy" alt="West Palm Beach, Palm Beach County, seen from above or across the water"><figcaption><span class="place">West Palm Beach</span><span class="cty">Palm Beach County</span><span class="cnt"><b>55</b> new agents, no broker</span></figcaption></figure></li><li class="card"><figure><img src="assets/orange.webp" width="960" height="640" loading="lazy" alt="Orlando, Orange County, seen from above or across the water"><figcaption><span class="place">Orlando</span><span class="cty">Orange County</span><span class="cnt"><b>43</b> new agents, no broker</span></figcaption></figure></li><li class="card"><figure><img src="assets/lee.webp" width="960" height="640" loading="lazy" alt="Fort Myers and Cape Coral, Lee County, seen from above or across the water"><figcaption><span class="place">Fort Myers and Cape Coral</span><span class="cty">Lee County</span><span class="cnt"><b>36</b> new agents, no broker</span></figcaption></figure></li><li class="card"><figure><img src="assets/hillsborough.webp" width="960" height="640" loading="lazy" alt="Tampa, Hillsborough County, seen from above or across the water"><figcaption><span class="place">Tampa</span><span class="cty">Hillsborough County</span><span class="cnt"><b>26</b> new agents, no broker</span></figcaption></figure></li><li class="card last"><div><span class="cty">All of Florida</span><b>571</b><span class="cnt">new agents with no broker, in 46 counties this week</span><a class="btn" href="#price">See the prices</a></div></li></ul>
+</section>
 
-<footer>
-<p>Questions: <a href="mailto:newfloridaagents@gmail.com">newfloridaagents@gmail.com</a></p>
-<p>Counts updated 2026-11-20 from the public state licence file. Not a state website.</p>
-</footer>
+<section class="table" id="table"><div class="wrap grid reveal">
+<div>
+<p class="eyebrow">The full count</p>
+<h2>571 agents in 46 counties.</h2>
+<p>Licensed in the last 14 days, with no broker on record. These are this week's real counts, and the page updates when the state updates its file.</p>
+</div>
+<div><table>
+<thead><tr><th scope="col">County</th><th scope="col" style="text-align:right">Agents</th><th scope="col"><span style="position:absolute;left:-999px">Share</span></th></tr></thead>
+<tbody><tr><th scope="row">Dade</th><td class="n">86</td><td class="bar"><i style="--w:100%"></i></td></tr><tr><th scope="row">Broward</th><td class="n">64</td><td class="bar"><i style="--w:74%"></i></td></tr><tr><th scope="row">Palm Beach</th><td class="n">55</td><td class="bar"><i style="--w:64%"></i></td></tr><tr><th scope="row">Orange</th><td class="n">43</td><td class="bar"><i style="--w:50%"></i></td></tr><tr><th scope="row">Lee</th><td class="n">36</td><td class="bar"><i style="--w:42%"></i></td></tr><tr><th scope="row">Hillsborough</th><td class="n">26</td><td class="bar"><i style="--w:30%"></i></td></tr><tr><th scope="row">Duval</th><td class="n">16</td><td class="bar"><i style="--w:19%"></i></td></tr><tr><th scope="row">Polk</th><td class="n">14</td><td class="bar"><i style="--w:16%"></i></td></tr><tr><th scope="row">Manatee</th><td class="n">13</td><td class="bar"><i style="--w:15%"></i></td></tr><tr><th scope="row">Sarasota</th><td class="n">13</td><td class="bar"><i style="--w:15%"></i></td></tr><tr><th scope="row">Brevard</th><td class="n">11</td><td class="bar"><i style="--w:13%"></i></td></tr><tr><th scope="row">Lake</th><td class="n">11</td><td class="bar"><i style="--w:13%"></i></td></tr><tr><th scope="row">All other counties</th><td class="n">183</td><td class="bar"></td></tr></tbody>
+</table></div>
+</div></section>
+
+<section class="file" id="file"><div class="wrap grid">
+<div>
+<p class="eyebrow">What you get</p>
+<h2>One file a week. Ready for your mail merge.</h2>
+<ul>
+<li>Name, mailing address, city, county, zip code, licence number and licence date.</li>
+<li>One CSV file by email. It opens in Excel and in any label or mail-merge tool.</li>
+<li>No phone numbers and no email addresses. The state does not publish them. This is a list for letters and cards.</li>
+</ul>
+</div>
+<div class="back" aria-label="Drawing of the back of a postcard, showing the columns in the file. No real person is shown.">
+<div><h3>Your message</h3><p class="note">Welcome to the business. We are a local firm, and we would like to meet you.</p></div>
+<div><h3>From the file</h3><dl>
+<div><dt>Name</dt><dd style="--w:70%"></dd></div>
+<div><dt>Mailing address</dt><dd style="--w:92%"></dd></div>
+<div><dt>City, county, zip</dt><dd style="--w:80%"></dd></div>
+<div><dt>Licence number</dt><dd style="--w:46%"></dd></div>
+<div><dt>Licence date</dt><dd style="--w:38%"></dd></div>
+</dl></div>
+<span class="post">FIRST<br>CLASS</span>
+</div>
+</div></section>
+
+<section class="week" id="how"><div class="wrap">
+<p class="eyebrow">How a week goes</p>
+<h2>From the state's file to a new agent's mailbox.</h2>
+<ol class="steps">
+<li><h3>The state updates</h3><p>The Florida DBPR publishes its public licence file, about 450,000 licences.</p></li>
+<li><h3>We sort it</h3><p>We keep sales associates licensed in the last 14 days who have no broker on record.</p></li>
+<li><h3>You get the file</h3><p>Your county, or all of Florida, arrives by email once a week.</p></li>
+<li><h3>Your letter lands</h3><p>You write while most new agents are still choosing a firm.</p></li>
+</ol>
+</div></section>
+
+<section class="price" id="price"><div class="wrap">
+<p class="eyebrow">Price</p>
+<h2>Two plans. Monthly. Cancel by email.</h2>
+<div class="plans">
+<div class="plan"><h3>One county</h3><div class="amt">$39 <small>a month</small></div><p>The new agents in the county you choose, each week.</p><a class="btn" href="https://buy.stripe.com/9B628t5Xi8n37jtcBb9bO03">Order one county</a></div>
+<div class="plan wide"><h3>All of Florida</h3><div class="amt">$149 <small>a month</small></div><p>Every county in one file, each week. 571 agents this week.</p><a class="btn" href="https://buy.stripe.com/cNi14p71meLr6fp0St9bO04">Order all Florida</a></div>
+</div>
+<p class="fine">Payment is by card through Stripe. The card statement shows the seller name Tech.Regardless. Your first file comes by email within three working days of the order, then one each week. To cancel, write to <a href="mailto:newfloridaagents@gmail.com" style="color:#fff">newfloridaagents@gmail.com</a>.</p>
+</div></section>
+
+<section class="faq" id="questions"><div class="wrap grid">
+<div><p class="eyebrow">Questions</p><h2>Straight answers.</h2></div>
+<div>
+<details><summary>Can I make this list myself for free?</summary><p>Yes. The source is a public record, and any firm can download it from the state. It is one large file with no column names, and it must be filtered again each week. We sell the weekly sort, not secret data.</p></details>
+<details><summary>Does the file have phone numbers or email addresses?</summary><p>No. The state's public file does not carry them, so ours does not either. The file is made for post: letters, cards and welcome packs.</p></details>
+<details><summary>Where does the data come from?</summary><p>The public licence file of the Florida Department of Business and Professional Regulation. It is a public record under Fla. Stat. 455.229. This is not a state website, and the state does not endorse it.</p></details>
+<details><summary>Are there rules for writing to these agents?</summary><p>Yes. A licensee who advertises must follow the state advertising rule, 61J2-10.025: show your firm's licensed name and say nothing false. This page is not legal advice.</p></details>
+<details><summary>How do I cancel?</summary><p>Write to newfloridaagents@gmail.com. The plan stops and no further month is charged.</p></details>
+</div>
+</div></section>
 </main>
+
+<footer><div class="wrap">
+<a class="mark" href="#top">New Florida Agents<i>.</i></a>
+<p>Questions: <a href="mailto:newfloridaagents@gmail.com">newfloridaagents@gmail.com</a></p>
+<p>Counts updated November 20, 2026 from the public state licence file. Not a state website. Not legal advice.</p>
+<p>Photos, cropped, from Wikimedia Commons: <a href="https://commons.wikimedia.org/wiki/File:Miami_aerial_pano.jpg">Miami by Spcc111</a> (CC BY-SA 4.0) · <a href="https://commons.wikimedia.org/wiki/File:Fort_Lauderdale_Aerial_Shot.jpg">Fort Lauderdale by Yanjipy</a> (CC BY-SA 4.0) · <a href="https://commons.wikimedia.org/wiki/File:West_Palm_Beach_Aerial_November_2014_photo_Don_Ramey_Logan.jpg">West Palm Beach by Don Ramey Logan</a> (CC BY 4.0) · <a href="https://commons.wikimedia.org/wiki/File:Lake_Eola_and_Orlando_Skyline_seen_in_2024.jpg">Orlando by JER3L1337</a> (CC BY 4.0) · <a href="https://commons.wikimedia.org/wiki/File:Fort_Meyers_and_Cape_Coral_Aerial_(30658938330).jpg">Fort Myers and Cape Coral by formulanone</a> (CC BY-SA 2.0) · <a href="https://commons.wikimedia.org/wiki/File:Downtown_Tampa,_Florida.jpg">Tampa by Clément Bardot</a> (CC BY-SA 4.0). Licence texts: <a href="https://creativecommons.org/licenses/">creativecommons.org/licenses</a>. Video: Mixkit, free licence. The photos show places, not people on the list.</p>
+</div></footer>
+
+<script>
+(function(){
+var calm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var bar=document.getElementById('bar');
+function onS(){bar.classList.toggle('solid',scrollY>innerHeight*0.55)}
+addEventListener('scroll',onS,{passive:true});onS();
+// hero video: only on wide screens, only when motion is welcome and data is not being saved
+var v=document.getElementById('vid'),vb=document.getElementById('vidbtn');
+var save=navigator.connection&&navigator.connection.saveData;
+if(!calm&&!save&&innerWidth>=760){v.src='assets/hero.mp4';v.play().then(function(){vb.hidden=false}).catch(function(){});
+vb.onclick=function(){if(v.paused){v.play();vb.textContent='Pause video'}else{v.pause();vb.textContent='Play video'}}}
+// numbers count up once
+function count(el){var to=+el.dataset.count,t0=null;if(calm||!to)return;
+requestAnimationFrame(function f(t){t0=t0||t;var p=Math.min(1,(t-t0)/900);el.textContent=Math.round(to*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)})}
+document.querySelectorAll('[data-count]').forEach(count);
+// bars grow when their section comes into view
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.2});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)})}else{document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in')})}
+// postcard rack
+var c=document.getElementById('cards'),pp=document.getElementById('pp'),timer=null;
+function step(d){var w=c.querySelector('.card').getBoundingClientRect().width+22;
+if(d>0&&c.scrollLeft+c.clientWidth>=c.scrollWidth-8){c.scrollTo({left:0,behavior:calm?'auto':'smooth'})}else{c.scrollBy({left:d*w,behavior:calm?'auto':'smooth'})}}
+document.getElementById('prev').onclick=function(){stop();step(-1)};
+document.getElementById('next').onclick=function(){stop();step(1)};
+function start(){timer=setInterval(function(){step(1)},4500);pp.textContent='Pause'}
+function stop(){clearInterval(timer);timer=null;pp.textContent='Play'}
+if(!calm){pp.hidden=false;start();pp.onclick=function(){timer?stop():start()};
+['pointerdown','keydown','wheel','touchstart'].forEach(function(n){c.addEventListener(n,stop,{passive:true})})}
+})();
+</script>
 </body>
 </html>
